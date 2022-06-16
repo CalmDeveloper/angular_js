@@ -1,5 +1,7 @@
 const app = angular.module('app',[]);
-
+app.run(function ($templateCache) {
+    $templateCache.put('bookmarks.html', "<div ng-repeat='bookmark in bookmarks'>{{bookmark.name}}</div>");
+});
 app.directive('myDir', function () {
     const bookmarks = [
         {name: 'nodeJs'},
