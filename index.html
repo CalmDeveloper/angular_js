@@ -8,6 +8,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script src="main.js"></script>
+<div ng-controller="mainCtrl">
+    <div ng-repeat="user in users">{{user.id}} - {{user.name}}
+        <button ng-click="getDetails({id:user.id})">find value</button>
+    </div>
+    <div>{{userDetails.username}}  {{userDetails.email}} </div>
+</div>
+
+
 
 </body>
 </html>
