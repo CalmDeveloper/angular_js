@@ -8,7 +8,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script src="main.js"></script>
+<div ng-controller="myCtrl">
+    {{name}}
+    <div><button ng-click="reverse()">changeName</button></div>
 
+    <br>
+    <my-dir name="{{name}}" reverse="reverse()"></my-dir>
+<!--    <my-dir name="name"></my-dir>-->
+</div>
 </body>
 </html>
 
