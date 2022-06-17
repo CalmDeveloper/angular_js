@@ -8,11 +8,18 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script src="main.js"></script>
-<div ng-controller="mainCtrl">
-    <div ng-repeat="user in users">{{user.id}} - {{user.name}}
-        <button ng-click="getDetails({id:user.id})">find value</button>
+<div ng-controller="carsCtrl">
+    <div>
+        <label>model: <input type="text" ng-model="model"></label>
+        <label>price: <input type="text" ng-model="price"></label>
+        <label>year: <input type="text" ng-model="year"></label>
+        <button ng-click="createCar({model:model,price:price,year:year})">save</button>
     </div>
-    <div>{{userDetails.username}}  {{userDetails.email}} </div>
+    <div ng-repeat="car in cars">{{car.id}} {{car.model}} {{car.year}} {{car.price}}
+        <button ng-click="updateCar({id:car.id,model:car.model,price:car.price,year:car.year})">update</button>
+        <button ng-click="delCar({id:car.id,model:car.model,price:car.price,year:car.year})">delete</button>
+    </div>
+
 </div>
 
 
